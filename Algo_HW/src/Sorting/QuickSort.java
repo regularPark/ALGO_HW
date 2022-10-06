@@ -1,9 +1,11 @@
 package Sorting;
 
+import java.util.*;
+
 public class QuickSort {
 
-    public static void sort(String[] arr) {
-        m_pivot_sort(arr, 0, arr.length - 1);
+    public static void sort(List<String> arr) {
+        m_pivot_sort(arr, 0, arr.size() - 1);
     }
 
     /**
@@ -12,7 +14,7 @@ public class QuickSort {
      * @param lo	현재 부분배열의 왼쪽
      * @param hi	현재 부분배열의 오른쪽
      */
-    private static void m_pivot_sort(String[] a, int lo, int hi) {
+    private static void m_pivot_sort(List<String> a, int lo, int hi) {
 
         /*
          *  lo가 hi보다 크거나 같다면 정렬 할 원소가
@@ -65,6 +67,7 @@ public class QuickSort {
 
         m_pivot_sort(a, lo, pivot);
         m_pivot_sort(a, pivot + 1, hi);
+//        System.out.println(a);
     }
 
 
@@ -77,12 +80,12 @@ public class QuickSort {
      * @param right	현재 배열의 가장 오른쪽 부분
      * @return		최종적으로 위치한 피벗의 위치(hi)를 반환
      */
-    private static int partition(String[] a, int left, int right) {
+    private static int partition(List<String> a, int left, int right) {
 
         // lo와 hi는 각각 배열의 끝에서 1 벗어난 위치부터 시작한다.
         int lo = left - 1;
         int hi = right + 1;
-        String pivot = a[(left + right) / 2];		// 부분리스트의 중간 요소를 피벗으로 설정
+        String pivot = a.get((left + right) / 2);		// 부분리스트의 중간 요소를 피벗으로 설정
 
 
         while(true) {
@@ -93,7 +96,7 @@ public class QuickSort {
              */
             do {
                 lo++;
-            } while(a[lo].compareTo(pivot) < 0 );
+            } while(a.get(lo).compareTo(pivot) < 0 );
 
 
             /*
@@ -102,7 +105,7 @@ public class QuickSort {
              */
             do {
                 hi--;
-            } while(a[hi].compareTo(pivot) > 0 && lo <= hi);
+            } while(a.get(hi).compareTo(pivot) > 0 && lo <= hi);
 
 
             /*
@@ -121,10 +124,10 @@ public class QuickSort {
 
 
 
-    private static void swap(String[] a, int i, int j) {
-        String temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
+    private static void swap(List<String> a, int i, int j) {
+        String tmp = a.get(i);
+        a.set(i, a.get(j));
+        a.set(j, tmp);
     }
 
 }

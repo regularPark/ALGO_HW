@@ -9,7 +9,7 @@ public class HeapSort {
     private static void sort(String[] a, int size) {
 
         /*
-         * 부모노드와 heaify과정에서 음수가 발생하면 잘못 된 참조가 발생하기 때문에
+         * 부모노드와 heaify 과정에서 음수가 발생하면 잘못 된 참조가 발생하기 때문에
          * 원소가 1개이거나 0개일 경우는 정렬 할 필요가 없으므로 바로 함수를 종료한다.
          */
         if(size < 2) {
@@ -80,15 +80,15 @@ public class HeapSort {
 
             /*
              * left child node와 비교
-             * (범위는 while문에서 검사했으므로 별도 검사 필요 없음)
+             * (범위는 while 문에서 검사했으므로 별도 검사 필요 없음)
              */
             if (a[leftChildIdx].compareTo(a[largestIdx])>0) {
                 largestIdx = leftChildIdx;
             }
 
             /*
-             * right child node와 비교
-             * right child node는 범위를 검사해주어야한다.
+             * right child node 와 비교
+             * right child node 는 범위를 검사해주어야한다.
              */
             if (rightChildIdx <= lastIdx && a[rightChildIdx].compareTo(a[largestIdx]) >0) {
                 largestIdx = rightChildIdx;

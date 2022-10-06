@@ -1,18 +1,21 @@
 package Sorting;
 
+import java.util.*;
+
 public class MergeSort {
 
-    private static String[] sorted;		// 합치는 과정에서 정렬하여 원소를 담을 임시배열
+    private static List<String> sorted;		// 합치는 과정에서 정렬하여 원소를 담을 임시배열
 
-    public static void merge_sort(String[] a) {
+    public static void merge_sort(List<String> a) {
 
-        sorted = new String[a.length];
-        merge_sort(a, 0, a.length - 1);
+        sorted = new ArrayList<String>() {
+        };
+        merge_sort(a, 0, a.size() - 1);
         sorted = null;
     }
 
     // Top-Down 방식 구현
-    private static void merge_sort(String[] a, int left, int right) {
+    private static void merge_sort(List<String> a, int left, int right) {
 
         /*
          *  left==right 즉, 부분리스트가 1개의 원소만 갖고있는경우
@@ -27,6 +30,7 @@ public class MergeSort {
 
         merge(a, left, mid, right);		// 병합작업
 
+        System.out.println(a);
     }
 
     /**
@@ -37,19 +41,19 @@ public class MergeSort {
      * @param mid	배열의 중간점
      * @param right	배열의 끝 점
      */
-    private static void merge(String[] a, int left, int mid, int right) {
-        int l = left;		// 왼쪽 부분리스트 시작점
-        int r = mid + 1;	// 오른쪽 부분리스트의 시작점
-        int idx = left;		// 채워넣을 배열의 인덱스
+    private static void merge(List<String> a, int left, int mid, int right) {
+        int l = left;        // 왼쪽 부분리스트 시작점
+        int r = mid + 1;    // 오른쪽 부분리스트의 시작점
+        int idx = left;        // 채워넣을 배열의 인덱스
 
 
-        while(l <= mid && r <= right) {
+        while (l <= mid && r <= right) {
             /*
              *  왼쪽 부분리스트 l번째 원소가 오른쪽 부분리스트 r번째 원소보다 작거나 같을 경우
              *  왼쪽의 l번째 원소를 새 배열에 넣고 l과 idx를 1 증가시킨다.
              */
-            if(a[l].compareTo(a[r]) <= 0) {
-                sorted[idx] = a[l];
+            if (a.get(l).compareTo(a.get(r)) <= 0) {
+                sorted.set(idx, a.get(l));
                 idx++;
                 l++;
             }
@@ -58,7 +62,7 @@ public class MergeSort {
              *  오른쪽의 r번째 원소를 새 배열에 넣고 r과 idx를 1 증가시킨다.
              */
             else {
-                sorted[idx] = a[r];
+                sorted.set(idx, a.get(r));
                 idx++;
                 r++;
             }
@@ -69,9 +73,9 @@ public class MergeSort {
          * = 오른쪽 부분리스트 원소가 아직 남아있을 경우
          * 오른쪽 부분리스트의 나머지 원소들을 새 배열에 채워준다.
          */
-        if(l > mid) {
-            while(r <= right) {
-                sorted[idx] = a[r];
+        if (l > mid) {
+            while (r <= right) {
+                sorted.set(idx, a.get(r));
                 idx++;
                 r++;
             }
@@ -83,8 +87,8 @@ public class MergeSort {
          * 왼쪽 부분리스트의 나머지 원소들을 새 배열에 채워준다.
          */
         else {
-            while(l <= mid) {
-                sorted[idx] = a[l];
+            while (l <= mid) {
+                sorted.set(idx, a.get(l));
                 idx++;
                 l++;
             }
@@ -93,8 +97,8 @@ public class MergeSort {
         /*
          * 정렬된 새 배열을 기존의 배열에 복사하여 옮겨준다.
          */
-        for(int i = left; i <= right; i++) {
-            a[i] = sorted[i];
+        for (int i = left; i <= right; i++) {
+            a.set(i, sorted.get(i));
         }
     }
 }
