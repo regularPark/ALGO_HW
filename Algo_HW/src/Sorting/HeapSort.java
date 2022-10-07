@@ -1,12 +1,14 @@
 package Sorting;
 
+import java.util.*;
+
 public class HeapSort {
 
-    public static void sort(String[] a) {
-        sort(a, a.length);
+    public static void sort(List<String> a) {
+        sort(a, a.size());
     }
 
-    private static void sort(String[] a, int size) {
+    private static void sort(List<String> a, int size) {
 
         /*
          * 부모노드와 heaify 과정에서 음수가 발생하면 잘못 된 참조가 발생하기 때문에
@@ -51,14 +53,14 @@ public class HeapSort {
     }
 
     // 두 인덱스의 원소를 교환하는 함수
-    private static void swap(String[] a, int i, int j) {
-        String temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
+    private static void swap(List<String> a, int i, int j) {
+        String tmp = a.get(i);
+        a.set(i, a.get(j));
+        a.set(j, tmp);
     }
 
 
-    private static void heapify(String[] a, int parentIdx, int lastIdx) {
+    private static void heapify(List<String> a, int parentIdx, int lastIdx) {
 
         int leftChildIdx;
         int rightChildIdx;
@@ -82,7 +84,7 @@ public class HeapSort {
              * left child node와 비교
              * (범위는 while 문에서 검사했으므로 별도 검사 필요 없음)
              */
-            if (a[leftChildIdx].compareTo(a[largestIdx])>0) {
+            if (a.get(leftChildIdx).compareTo(a.get(largestIdx))>0) {
                 largestIdx = leftChildIdx;
             }
 
@@ -90,7 +92,7 @@ public class HeapSort {
              * right child node 와 비교
              * right child node 는 범위를 검사해주어야한다.
              */
-            if (rightChildIdx <= lastIdx && a[rightChildIdx].compareTo(a[largestIdx]) >0) {
+            if (rightChildIdx <= lastIdx && a.get(rightChildIdx).compareTo(a.get(largestIdx)) >0) {
                 largestIdx = rightChildIdx;
             }
 

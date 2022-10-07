@@ -87,7 +87,15 @@ public class Main {
 //
 //        System.out.println("Quick Sorting : " + (end_quick-start_quick));
 
-        // 힙정렬 실행시간
+//        // 힙정렬 실행시간
+//
+//        HeapSort heapSort = new HeapSort();
+//
+//        long start_heap = timer.startTime();
+//        heapSort.sort(heapList);
+//        long end_heap= timer.endTime();
+//
+//        System.out.println("Heap Sorting : " + (end_heap-start_heap));
 
         // 기수정렬 실행시간
     }

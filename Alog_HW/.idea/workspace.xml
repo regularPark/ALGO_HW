@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17f368bd-2ccb-47d2-adf7-858c78ed520b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/Alog_HW.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Algo_HW/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algo_HW/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/src/Sorting/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algo_HW/src/Sorting/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/src/Sorting/HeapSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/src/Sorting/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algo_HW/src/Sorting/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/src/Sorting/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algo_HW/src/Sorting/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/src/Sorting/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algo_HW/src/Sorting/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algo_HW/src/Sorting/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algo_HW/src/Sorting/SelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Algo_HW/src/Sorting/HeapSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Algo_HW/src/Sorting/HeapSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
