@@ -43,6 +43,7 @@ public class HeapSort {
             swap(a, 0, i);
             heapify(a, 0, i - 1);
         }
+        System.out.println(a);
 
     }
 
