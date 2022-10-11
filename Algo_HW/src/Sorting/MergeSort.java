@@ -23,6 +23,7 @@ public class MergeSort <T extends Comparable<T>> {
             right = sort(right);
             merge(left,right,original);
         }
+        System.out.println("Size of list is " + original.size());
         System.out.println(original);
         return original;
     }

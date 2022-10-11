@@ -14,5 +14,6 @@ public class InsertionSort {
             arr.set(prev+1, tmp);
         }
         System.out.println(arr);
+        System.out.println("Size of list is " + arr.size());
     }
 }

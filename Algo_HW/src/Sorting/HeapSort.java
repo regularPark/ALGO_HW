@@ -44,6 +44,7 @@ public class HeapSort {
             heapify(a, 0, i - 1);
         }
         System.out.println(a);
+        System.out.println("Size of list is " + a.size());
 
     }
 

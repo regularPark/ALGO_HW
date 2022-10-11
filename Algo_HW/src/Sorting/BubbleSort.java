@@ -13,6 +13,7 @@ public class BubbleSort {
             }
         }
         System.out.println(arr);
+        System.out.println("Size of list is " + arr.size());
     }
 
 }

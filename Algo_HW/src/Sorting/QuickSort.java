@@ -7,6 +7,7 @@ public class QuickSort {
     public static void sort(List<String> arr) {
         m_pivot_sort(arr, 0, arr.size() - 1);
         System.out.println(arr);
+        System.out.println("Size of list is " + arr.size());
     }
 
     /**

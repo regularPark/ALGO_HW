@@ -15,6 +15,7 @@ public class SelectionSort {
             }
         }
         // 시간 측정 추가하기
-        System.out.println(arr.size());
+        System.out.println(arr);
+        System.out.println("Size of list is " + arr.size());
     }
 }
