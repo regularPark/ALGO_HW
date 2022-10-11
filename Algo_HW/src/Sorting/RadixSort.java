@@ -58,7 +58,7 @@ public class RadixSort {
     public static void sort(String [] original) {
         String [] sorted = radixSortForStrings(original);
 
-//        System.out.println(sorted);
+        System.out.println(sorted);
 
     }
 

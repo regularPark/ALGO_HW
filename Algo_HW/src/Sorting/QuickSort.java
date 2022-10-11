@@ -6,6 +6,7 @@ public class QuickSort {
 
     public static void sort(List<String> arr) {
         m_pivot_sort(arr, 0, arr.size() - 1);
+        System.out.println(arr);
     }
 
     /**
@@ -67,7 +68,6 @@ public class QuickSort {
 
         m_pivot_sort(a, lo, pivot);
         m_pivot_sort(a, pivot + 1, hi);
-//        System.out.println(a);
     }
 
 
